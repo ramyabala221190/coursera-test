@@ -1,0 +1,62 @@
+<! doctype html>
+
+<head>
+
+<title>Assignment1</title>
+
+<script src="angular.min.js"></script>
+
+
+<style>
+
+.pop{color:green}
+
+.pop1{color:red}
+
+
+</style>
+
+
+</head>
+
+<body ng-app="LunchCheck">
+
+<div ng-controller="LunchCheckController">
+
+
+<label id="enter"> Please enter the items you eat for lunch. Make sure you seperate them by commas</label>
+
+<input ng-style="mystyle" type="text" id="enter" ng-model="item" name="item">
+<span class="pop"> Please do not enter empty items</span>
+
+
+
+<br>
+
+<button ng-click="check()"  ng-init="y=false" ng-init="n=false"ng-init="z=false">Check If Too Much</button><br>
+
+<div ng-show="z">
+
+<p class="pop1">{{message2}}</p>
+
+</div>
+
+
+<div ng-show="y">
+
+<p class="pop">{{message}}</p>
+
+</div>
+
+<div ng-show="n">
+
+<p class="pop">{{message1}}</p>
+
+</div>
+
+</div>
+<script src="text_app.js"></script>
+
+</body>
+
+</html>
