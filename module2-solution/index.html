@@ -1,0 +1,68 @@
+<! doctype.html>
+
+<head>
+<title> ShoppingListCheckOff</title>
+
+<script src="angular.min.js"></script>
+
+
+<style>
+
+.col{color:red}
+
+button{position:absolute;left:200px;display:inline-block;width:100px}
+
+</style>
+
+</head>
+
+<body ng-app="ShoppingListCheckOff">
+
+<h2>Shopping List</h2>
+
+<h5>Items to Buy list<h5>
+
+<div ng-controller="ToBuyController as list1">
+
+<ul>
+<li ng-repeat="x in list1.toBuy">{{$index+1}} Buy {{x.quantity}}  {{x.name}}
+<button  ng-click="list1.buy($index)">Bought</button>
+
+<br><br>
+
+</li>
+</ul>
+
+<div class="col" ng-if="list1.len1==0">Everything is bought!</div>
+
+
+</div>
+
+<h5>Items Bought list<h5>
+
+
+<div  ng-controller="AlreadyBoughtController as list2">
+
+
+
+<ol >
+
+<li  ng-repeat="x in list2.bought"> Bought {{x.quantity}}  {{x.name}}</li>
+
+</ol>
+
+
+
+
+<div class="col" ng-if="list2.bought.length==0">Nothing Bought yet!</div>
+
+
+</div>
+
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
