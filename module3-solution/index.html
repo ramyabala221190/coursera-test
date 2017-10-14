@@ -1,0 +1,28 @@
+<! doctypehtml>
+
+<head>
+
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+
+</head>
+
+<body ng-app="NarrowItDownApp">
+
+<div ng-controller="NarrowItDownController as menu">
+
+<input type="text" ng-model="menu.search" placeholder="Search here"><button ng-init="menu.x=false" ng-click="menu.check(menu.search)">Narrow It Down For Me!</button>
+
+<found-items menu="menu"></found-items>
+
+
+<div ng-show="menu.x">
+
+Error:{{menu.error}}
+
+</div>
+
+</div>
+
+</body>
+</html>
