@@ -1,0 +1,10 @@
+<a ui-sref="home">Home</a>
+
+
+<h4> Below are the items available. Please click on the links below to get more details on each item</h4>
+
+<ol>
+
+<li ng-repeat="x in $ctrl.disp">{{x.name}} <a ui-sref="items({itemId:x.short_name})">[{{x.short_name}}]</a>  {{x.special_instructions}}</li>
+
+<ol>

@@ -1,0 +1,20 @@
+
+<a ui-sref="categories">Menu</a><br><a ui-sref="home">Home</a>
+
+<ol>
+
+<li ng-repeat="x in $ctrl.itemdisp">
+
+<b>Name</b>:{{x.name}} [{{x.short_name}}] <br>
+
+<b>Description</b>:{{x.description}}<br>
+
+<b>Price for small portion({{x.small_portion_name}})</b>:{{x.price_small}}<br>
+
+<b>Price for large portion({{x.large_portion_name}})</b>:{{x.price_large}}<br>
+
+
+</li>
+
+
+</ol>
