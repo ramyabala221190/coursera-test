@@ -1,0 +1,40 @@
+
+<br>
+
+<br>
+
+<p> The text you have entered may not be visible but when you highlight it, it can be seen</p>
+<form name="myform">
+
+First Name<input type="text" name="first" ng-model="cntrl.first" required>
+
+<span ng-if="myform.first.$error.required && myform.first.$touched"> Please enter first name</span><br><br>
+
+Last Name<input type="text" name="last" ng-model="cntrl.last"  required>
+
+<span ng-if="myform.last.$error.required && myform.last.$touched"> Please enter last name</span><br><br>
+
+Email<input type="email" name="email" ng-model="cntrl.email" required>
+
+<span ng-if="(myform.email.$error.required ||myform.email.$invalid) && myform.email.$touched"> Please enter a valid email Id</span>
+
+
+<br><br>
+
+Mobile No<input type="text" name="phone" ng-model="cntrl.phone" required minlength="10" maxlength="10">
+
+<span ng-if="(myform.phone.$error.required||myform.phone.$error.minlength||myform.phone.$error.maxlength)&& myform.phone.$touched"> Please enter a 10 digit mobile no</span>
+
+
+<br>
+
+<br>
+
+Menu No<input type="text" name="menuno" ng-model="cntrl.menuno" id="menu">
+
+<br>
+
+<button ng-disabled="myform.$invalid" ui-sref="res({itemId:cntrl.menuno,first:cntrl.first,last:cntrl.last,email:cntrl.email,phone:cntrl.phone})">Sign Up</button>
+
+</form>
+
