@@ -1,0 +1,11 @@
+label{display:inline-block;width:100px}
+
+button{color:black;background-color:lightblue}
+
+input{background-color:lightblue;color:black}
+
+div{border-style:solid;border-color:blue;border-width:2px}
+
+p{text-align:center}
+
+div{margin:auto;width:50%}

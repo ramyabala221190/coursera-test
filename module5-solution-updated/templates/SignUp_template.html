@@ -1,0 +1,102 @@
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/signup.css">
+
+</head>
+
+<body>
+
+<br>
+
+<br>
+
+<p> Sign-up Form</p>
+<div>
+
+
+<form name="myform">
+
+
+<label id="fir">First Name</label>
+
+
+<input type="text" name="first" ng-model="cntrl.first" id="fir" pattern="[A-Za-z]{1,10}" required>
+
+
+
+
+
+<span ng-if="(myform.first.$error.required || myform.first.$error.pattern) && myform.first.$touched"> Please enter first name</span><br><br>
+
+
+
+<label id="las">Last Name</label>
+
+
+
+<input type="text" name="last" ng-model="cntrl.last" id="las" pattern="[A-Za-z]{1,10}" required>
+
+
+
+
+
+<span ng-if="(myform.last.$error.required || myform.last.$error.pattern) && myform.last.$touched"> Please enter last name</span><br><br>
+
+
+
+<label id="ema">Email</label>
+
+
+
+<input type="email" name="email" ng-model="cntrl.email" id="ema" required>
+
+
+
+
+<span ng-if="(myform.email.$error.required ||myform.email.$invalid) && myform.email.$touched"> Please enter a valid email Id</span>
+
+
+<br><br>
+
+
+
+<label id="mob">Mobile No</label>
+
+
+
+<input type="text" name="phone" ng-model="cntrl.phone" id="mob" required pattern="\d{10}">
+
+
+
+
+
+<span ng-if="(myform.phone.$error.required||myform.phone.$error.pattern)&& myform.phone.$touched"> Please enter a 10 digit mobile no</span>
+</tr>
+
+<br>
+
+<br>
+
+
+<label id="menu">Menu No</label>
+
+
+
+<input type="text" name="menuno" ng-model="cntrl.menuno" id="menu" required>
+
+<span ng-if="myform.menuno.$error.required && myform.menuno.$touched">Please enter a menu no</span>
+
+
+
+<br><br>
+
+<button ng-disabled="myform.$invalid" ui-sref="res({itemId:cntrl.menuno,first:cntrl.first,last:cntrl.last,email:cntrl.email,phone:cntrl.phone})">Sign Up</button>
+
+
+
+</form>
+
+</div>
+
+</body>
+

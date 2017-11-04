@@ -1,0 +1,30 @@
+<a ui-sref="home">Home</a>
+
+<div ng-if="$ctrl.disp1.length >0">
+
+<ul>
+
+<li ng-repeat="x in $ctrl.disp1">
+
+
+Id:{{x.id}}<br>
+
+First Name:{{x.first}}<br>
+
+Last Name:{{x.last}}<br>
+
+Email:{{x.email}}<br>
+
+Phone:{{x.phone}}<br>
+
+Favourite Menu Item:{{x.description}}<br>
+
+
+
+</li>
+
+</ul>
+
+</div>
+
+<div ng-if="($ctrl.disp1.length == 0 ||$ctrl.disp1== null)">You have not signed up Yet</div>
